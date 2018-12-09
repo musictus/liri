@@ -2,7 +2,6 @@ require("dotenv").config();
 
 var Spotify = require('node-spotify-api');
 var keys = require("./keys.js");
-var axios = require("axios");
 var fs = require("fs");
 
 
@@ -13,12 +12,15 @@ var SPOTIFY = function() {
     
     this.findSong = function(songTitle) {
 
-        console.log(songTitle);
         var spotify = new Spotify(keys.spotify);
+
+        if (!songTitle) {
+            songTitle = "The Sign";
+        };
 
         spotify.search({ type: 'track', query: songTitle }, function(err, data) {
             if (err) {
-            return console.log('Error occurred: ' + err);
+            return console.log("I'm sorry, an error occurred: " + err);
             }
         
         var spotifyResult = divider2 + "Artist: " + data.tracks.items[0].artists[0].name + "\nSong name: " + data.tracks.items[0].name +

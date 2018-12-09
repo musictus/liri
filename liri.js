@@ -6,6 +6,9 @@ var band = new BAND();
 var SPOTIFY = require("./spotify.js");
 var spotify = new SPOTIFY();
 
+var MOVIE = require("./movie.js");
+var movie = new MOVIE();
+
 // Grab liri command line argument
 var liriCommands = process.argv[2];
 // Joining the remaining arguments since they may contain spaces
@@ -21,7 +24,8 @@ if (liriCommands === "concert-this") {
       spotify.findSong(searchKeywords);
 
   } else if (liriCommands === "movie-this") {
-      console.log("Searching for Movies...")
+      console.log("Searching for Movies...");
+      movie.findMovie(searchKeywords);
 
   } else if (liriCommands === "do-what-it-says") {
       console.log("Doing whatever...")
