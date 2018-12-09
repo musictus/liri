@@ -1,12 +1,28 @@
-require("dotenv").config();
-require('node-spotify-api');
+require('dotenv').config();
 
-var spotify = new Spotify(keys.spotify);
+var BAND = require("./band.js");
+var band = new BAND();
 
-// concert-this
+var SPOTIFY = require("./spotify.js");
+var spotify = new SPOTIFY();
 
-// spotify-this-song
+// Grab liri command line argument
+var liriCommands = process.argv[2];
+// Joining the remaining arguments since they may contain spaces
+var searchKeywords = process.argv.slice(3).join(" ");
 
-// movie-this
 
-// do-what-it-says
+if (liriCommands === "concert-this") {
+    console.log("Searching for Concerts...");
+    band.findShow(searchKeywords);
+
+  } else if (liriCommands === "spotify-this-song") {
+      console.log("Searching for Songs...");
+      spotify.findSong(searchKeywords);
+
+  } else if (liriCommands === "movie-this") {
+      console.log("Searching for Movies...")
+
+  } else if (liriCommands === "do-what-it-says") {
+      console.log("Doing whatever...")
+  };
