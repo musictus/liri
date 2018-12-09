@@ -1,4 +1,5 @@
 require('dotenv').config();
+var fs = require("fs");
 
 var BAND = require("./band.js");
 var band = new BAND();
@@ -13,6 +14,26 @@ var movie = new MOVIE();
 var liriCommands = process.argv[2];
 // Joining the remaining arguments since they may contain spaces
 var searchKeywords = process.argv.slice(3).join(" ");
+
+var randomData;
+
+function getRandom(){
+    //Reads text in random.txt file
+    fs.readFile("random.txt", "utf8", function(error, data) {
+        if (error) {
+            return console.log(error);
+        }
+        else {
+        console.log(data);
+
+        //creates a variable for data in random.txt
+        randomData = data.split(",");
+        // console.log(randomData);
+        var searchKeywords = randomData[1];
+        spotify.findSong(searchKeywords);
+        }
+    });
+};
 
 
 if (liriCommands === "concert-this") {
@@ -29,4 +50,5 @@ if (liriCommands === "concert-this") {
 
   } else if (liriCommands === "do-what-it-says") {
       console.log("Doing whatever...")
+      getRandom();
   };

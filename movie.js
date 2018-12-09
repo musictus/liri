@@ -25,6 +25,11 @@ var MOVIE = function() {
 
         }).catch(function (error) {
             console.log("I'm sorry, it looks like there was an error" + error);
+
+            // Append showData and the divider to log.txt, print showData to the console
+            fs.appendFile("log.txt", spotifyResult, function(err) {
+                if (err) throw err;
+                })
         });
     }
 
