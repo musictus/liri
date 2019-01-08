@@ -1,6 +1,6 @@
 # liri
 
-`Exercise App for Columbia Engineering's Coding Bootcamp`
+`Exercise App for Columbia Engineering's Coding Bootcamp`  
 ==> _**Javascript**_ + _**Node.js**_ + _**Ajax**_
 
 ##User can use one of the following 4 commands##
