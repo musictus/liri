@@ -1,5 +1,7 @@
 # liri
 
+`Exercise App for Columbia Engineering's Coding Bootcamp`
+
 **User can use one of the following 4 commands**:
 
 1) Search for a *Band's tour schedule* by typing `node liri.js concert-this` followed by a `Band or Artist Name`
@@ -9,17 +11,17 @@
 
 **See examples below**:
 
-concert-this
+`concert-this`
 ![bandsintown](/images/bandsintown.png)
 
-spotify-this-song
+`spotify-this-song`
 ![spotify](/images/spotify.png)
 
-movie-this
+`movie-this`
 ![movies](/images/movies.png)
 
-do-what-it-says
+`do-what-it-says`
 ![do-what-it-says](/images/do-what-it-says.png)
 
-logs
+`logs`
 ![logs](/images/log.png)
