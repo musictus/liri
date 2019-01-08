@@ -1,8 +1,9 @@
 # liri
 
 `Exercise App for Columbia Engineering's Coding Bootcamp`
+==> _**Javascript**_ + _**Node.js**_ + _**Ajax**_
 
-**User can use one of the following 4 commands**:
+##User can use one of the following 4 commands##
 
 1) Search for a *Band's tour schedule* by typing `node liri.js concert-this` followed by a `Band or Artist Name`
 2) Search for a *Spotify song* by typing `node liri.js spotify-this-song` followed by a `Song Title`
